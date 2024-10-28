@@ -1,0 +1,11 @@
+id: f4b751b6-617a-4754-a31d-5b8fa3ca713f
+name: spring-music
+timestamp: 2024-10-28T15:03:36.911991Z
+source: INTELLIJ
+username: risbergt
+options:
+  deploymentType: tpfork8s
+  persistenceType: redis
+  includeBuildToolWrapper: true
+  javaVersion: "21"
+  projectName: redis-music
