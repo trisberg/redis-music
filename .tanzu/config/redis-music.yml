@@ -4,6 +4,10 @@ metadata:
   creationTimestamp: null
   name: redis-music
 spec:
+  acceptedServiceBindings:
+  - name: music
+    types:
+    - redis
   build:
     buildpacks: {}
     nonSecretEnv:
