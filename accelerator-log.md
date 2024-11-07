@@ -170,7 +170,7 @@
 ┃ ┃ ┃ ╺  Info Will replace [spring-music->redis-music]
 ┃ ┃ ┃ ╺  Info Will replace [JAVA_VERSION->21]
 ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[7] (Let)
-┃ ┃ ┃ ┃ Debug Adding symbol uuid with value 'fcdbf27f-2383-45cb-8dcf-70ae7d84f2fc'
+┃ ┃ ┃ ┃ Debug Adding symbol uuid with value 'b845e10c-c257-4b25-8e25-78a7613c3872'
 ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[7].in (Chain)
 ┃ ┃ ┃ ┃ ┃  Info Running Chain(ApplyTo, Merge, UniquePath, Merge, UniquePath, Provenance)
 ┃ ┃ ┃ ┃ ┃ ╺ engine.transformations[1].validated.transformations[7].in.transformations[0].apply (OpenRewriteRecipe)
