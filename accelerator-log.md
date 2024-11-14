@@ -3,6 +3,7 @@
 ## Options
 ```json
 {
+  "databaseType" : "h2",
   "deploymentType" : "tpfork8s",
   "persistenceType" : "redis",
   "includeBuildToolWrapper" : true,
@@ -20,6 +21,11 @@
 ┃ ┃ Debug LICENSE didn't match [accelerator.yaml, accelerator.axl] -> included
 ┃ ┃ Debug deploy/tpfork8s/tanzu.yml didn't match [accelerator.yaml, accelerator.axl] -> included
 ┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music.yml didn't match [accelerator.yaml, accelerator.axl] -> included
+┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-mysql-instance.yml didn't match [accelerator.yaml, accelerator.axl] -> included
+┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-mongodb-instance.yml didn't match [accelerator.yaml, accelerator.axl] -> included
+┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-binding.yml didn't match [accelerator.yaml, accelerator.axl] -> included
+┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-redis-instance.yml didn't match [accelerator.yaml, accelerator.axl] -> included
+┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-postgresql-instance.yml didn't match [accelerator.yaml, accelerator.axl] -> included
 ┃ ┃ Debug accelerator.yaml matched [accelerator.yaml, accelerator.axl] -> excluded
 ┃ ┃ Debug README.md didn't match [accelerator.yaml, accelerator.axl] -> included
 ┃ ┃ Debug .gitignore didn't match [accelerator.yaml, accelerator.axl] -> included
@@ -66,7 +72,7 @@
 ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1] (IfElse)
 ┃ ┃ ┃ ┃ engine.transformations[1].validated.transformations[1].otherwise (IfElse)
 ┃ ┃ ┃ ┃ engine.transformations[1].validated.transformations[1].otherwise.then (Chain)
-┃ ┃ ┃ ┃  Info Running Chain(ApplyTo, ApplyTo, Select)
+┃ ┃ ┃ ┃  Info Running Chain(ApplyTo, ApplyTo, IfElse, IfElse, IfElse, IfElse, IfElse, Select)
 ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[0].apply (Chain)
 ┃ ┃ ┃ ┃ ┃  Info Running Chain(ReplaceSnippet, RewritePath)
 ┃ ┃ ┃ ┃ ┃ ╺  Info Will replace [spring-music->redis-music]
@@ -78,6 +84,29 @@
 ┃ ┃ ┃ ┃ ┃ ┗  Info Will replace [spring-music->redis-music]
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[1].apply.transformations[1] (RewritePath)
 ┃ ┃ ┃ ┃ ┗ ┗ Debug Path 'deploy/tpfork8s/.tanzu/config/spring-music.yml' matched '^(?<folder>.*/)?(?<filename>([^/]+?|)(?=(?<ext>\.[^/.]*)?)$)' with groups {ext=.yml, folder=deploy/tpfork8s/.tanzu/config/, filename=spring-music.yml, g0=deploy/tpfork8s/.tanzu/config/spring-music.yml, g1=deploy/tpfork8s/.tanzu/config/, g2=spring-music.yml, g3=spring-music.yml, g4=.yml} and was rewritten to '.tanzu/config/redis-music.yml'
+┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[2] (IfElse)
+┃ ┃ ┃ ┃ ┃ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[2].then (Let)
+┃ ┃ ┃ ┃ ┃ Debug Adding symbol id with value '3391a1'
+┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[2].then.in.apply (Chain)
+┃ ┃ ┃ ┃ ┃ ┃  Info Running Chain(ReplaceText, OpenRewriteRecipe, RewritePath)
+┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[2].then.in.apply.transformations[0] (ReplaceText)
+┃ ┃ ┃ ┃ ┃ ┃ ┗  Info Will replace [spring-music->redis-music]
+┃ ┃ ┃ ┃ ┃ ┃ ╺ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[2].then.in.apply.transformations[1] (OpenRewriteRecipe)
+┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[2].then.in.apply.transformations[2] (RewritePath)
+┃ ┃ ┃ ┃ ┗ ┗ ┗ Debug Path 'deploy/tpfork8s/.tanzu/config/spring-music-binding.yml' matched '^(?<folder>.*/)?(?<filename>([^/]+?|)(?=(?<ext>\.[^/.]*)?)$)' with groups {ext=.yml, folder=deploy/tpfork8s/.tanzu/config/, filename=spring-music-binding.yml, g0=deploy/tpfork8s/.tanzu/config/spring-music-binding.yml, g1=deploy/tpfork8s/.tanzu/config/, g2=spring-music-binding.yml, g3=spring-music-binding.yml, g4=.yml} and was rewritten to '.tanzu/config/redis-music-binding.yml'
+┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[3] (IfElse)
+┃ ┃ ┃ ┃ ┗ null ()
+┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[4] (IfElse)
+┃ ┃ ┃ ┃ ┗ null ()
+┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[5] (IfElse)
+┃ ┃ ┃ ┃ ┗ null ()
+┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[6] (IfElse)
+┃ ┃ ┃ ┃ ┃ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[6].then.apply (Chain)
+┃ ┃ ┃ ┃ ┃  Info Running Chain(ReplaceText, RewritePath)
+┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[6].then.apply.transformations[0] (ReplaceText)
+┃ ┃ ┃ ┃ ┃ ┗  Info Will replace [spring-music->redis-music]
+┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[1].otherwise.then.transformations[6].then.apply.transformations[1] (RewritePath)
+┃ ┃ ┃ ┃ ┗ ┗ Debug Path 'deploy/tpfork8s/.tanzu/config/spring-music-redis-instance.yml' matched '^(?<folder>.*/)?(?<filename>([^/]+?|)(?=(?<ext>\.[^/.]*)?)$)' with groups {ext=.yml, folder=deploy/tpfork8s/.tanzu/config/, filename=spring-music-redis-instance.yml, g0=deploy/tpfork8s/.tanzu/config/spring-music-redis-instance.yml, g1=deploy/tpfork8s/.tanzu/config/, g2=spring-music-redis-instance.yml, g3=spring-music-redis-instance.yml, g4=.yml} and was rewritten to '.tanzu/config/redis-music-redis-instance.yml'
 ┃ ┃ ┃ ┃ ┏ Debug LICENSE matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug .gitignore matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug .gitattributes matched [!'deploy/**'] -> included
@@ -102,6 +131,9 @@
 ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/footer.html matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/header.html matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/albumForm.html matched [!'deploy/**'] -> included
+┃ ┃ ┃ ┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-mysql-instance.yml didn't match [!'deploy/**'] -> excluded
+┃ ┃ ┃ ┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-mongodb-instance.yml didn't match [!'deploy/**'] -> excluded
+┃ ┃ ┃ ┃ ┃ Debug deploy/tpfork8s/.tanzu/config/spring-music-postgresql-instance.yml didn't match [!'deploy/**'] -> excluded
 ┃ ┃ ┃ ┃ ┃ Debug README.md matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug build.gradle matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug src/test/java/com/example/music/ApplicationTests.java matched [!'deploy/**'] -> included
@@ -119,7 +151,9 @@
 ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/domain/ApplicationInfo.java matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/domain/RandomIdGenerator.java matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┃ ┃ Debug tanzu.yml matched [!'deploy/**'] -> included
-┃ ┃ ┃ ┗ ┗ Debug .tanzu/config/redis-music.yml matched [!'deploy/**'] -> included
+┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music.yml matched [!'deploy/**'] -> included
+┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-binding.yml matched [!'deploy/**'] -> included
+┃ ┃ ┃ ┗ ┗ Debug .tanzu/config/redis-music-redis-instance.yml matched [!'deploy/**'] -> included
 ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[2] (IfElse)
 ┃ ┃ ┃ ┗ null ()
 ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[3] (IfElse)
@@ -166,11 +200,13 @@
 ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/domain/ApplicationInfo.java matched [!'src/main/java/com/example/music/repositories/mongodb/**' && !'src/main/java/com/example/music/repositories/jpa/**'] -> included
 ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/domain/RandomIdGenerator.java matched [!'src/main/java/com/example/music/repositories/mongodb/**' && !'src/main/java/com/example/music/repositories/jpa/**'] -> included
 ┃ ┃ ┃ ┃ Debug tanzu.yml matched [!'src/main/java/com/example/music/repositories/mongodb/**' && !'src/main/java/com/example/music/repositories/jpa/**'] -> included
-┃ ┃ ┃ ┗ Debug .tanzu/config/redis-music.yml matched [!'src/main/java/com/example/music/repositories/mongodb/**' && !'src/main/java/com/example/music/repositories/jpa/**'] -> included
+┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music.yml matched [!'src/main/java/com/example/music/repositories/mongodb/**' && !'src/main/java/com/example/music/repositories/jpa/**'] -> included
+┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-binding.yml matched [!'src/main/java/com/example/music/repositories/mongodb/**' && !'src/main/java/com/example/music/repositories/jpa/**'] -> included
+┃ ┃ ┃ ┗ Debug .tanzu/config/redis-music-redis-instance.yml matched [!'src/main/java/com/example/music/repositories/mongodb/**' && !'src/main/java/com/example/music/repositories/jpa/**'] -> included
 ┃ ┃ ┃ ╺  Info Will replace [spring-music->redis-music]
 ┃ ┃ ┃ ╺  Info Will replace [JAVA_VERSION->21]
 ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[7] (Let)
-┃ ┃ ┃ ┃ Debug Adding symbol uuid with value 'b845e10c-c257-4b25-8e25-78a7613c3872'
+┃ ┃ ┃ ┃ Debug Adding symbol uuid with value 'db759646-bf28-4f16-9d04-4ca7a1595d9e'
 ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[7].in (Chain)
 ┃ ┃ ┃ ┃ ┃  Info Running Chain(ApplyTo, Merge, UniquePath, Merge, UniquePath, Provenance)
 ┃ ┃ ┃ ┃ ┃ ╺ engine.transformations[1].validated.transformations[7].in.transformations[0].apply (OpenRewriteRecipe)
@@ -213,6 +249,8 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/domain/ApplicationInfo.java matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/domain/RandomIdGenerator.java matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music.yml matched ['**'] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-binding.yml matched ['**'] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-redis-instance.yml matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug settings.gradle matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug tanzu.yml matched ['**'] -> included
@@ -235,6 +273,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path '.gitattributes', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/static/templates/grid.html', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/static/js/albums.js', will use the one appearing last 
+┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path '.tanzu/config/redis-music-redis-instance.yml', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/static/js/info.js', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/java/com/example/music/repositories/redis/RedisAlbumRepository.java', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/static/templates/footer.html', will use the one appearing last 
@@ -266,6 +305,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/static/templates/albums.html', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/java/com/example/music/web/ErrorController.java', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'src/main/resources/static/css/multi-columns-row.css', will use the one appearing last 
+┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path '.tanzu/config/redis-music-binding.yml', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┃ Debug Multiple representations for path 'tanzu.yml', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┗ Debug Multiple representations for path 'src/main/resources/application.yml', will use the one appearing last 
 ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[7].in.transformations[3] (Merge)
@@ -277,6 +317,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitattributes matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/grid.html matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/js/albums.js matched ['**'] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-redis-instance.yml matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/js/info.js matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/repositories/redis/RedisAlbumRepository.java matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/footer.html matched ['**'] -> included
@@ -308,6 +349,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/albums.html matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/web/ErrorController.java matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/css/multi-columns-row.css matched ['**'] -> included
+┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-binding.yml matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug tanzu.yml matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┗ Debug src/main/resources/application.yml matched ['**'] -> included
 ┃ ┃ ┃ ┃ ┃ ┃ ┏ engine.transformations[1].validated.transformations[7].in.transformations[3].sources[1] (InvokeFragment)
@@ -321,6 +363,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .gitattributes didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/grid.html didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/js/albums.js didn't match [gradlew*, gradle/**] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-redis-instance.yml didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/js/info.js didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/repositories/redis/RedisAlbumRepository.java didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/footer.html didn't match [gradlew*, gradle/**] -> excluded
@@ -352,6 +395,7 @@
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/templates/albums.html didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/java/com/example/music/web/ErrorController.java didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/static/css/multi-columns-row.css didn't match [gradlew*, gradle/**] -> excluded
+┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug .tanzu/config/redis-music-binding.yml didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug tanzu.yml didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug src/main/resources/application.yml didn't match [gradlew*, gradle/**] -> excluded
 ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ Debug README.md didn't match [gradlew*, gradle/**] -> excluded
